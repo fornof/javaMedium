@@ -21,11 +21,11 @@ public class MidiTest{
         MidiChannel[] mChannels = midiSynth.getChannels();
 
         midiSynth.loadInstrument(instr[0]);//load an instrument
-        String message = "Habcd,Aab";
+        String message = "Habcd,Aaa,Hbcdefaabbcddeeffgg";
         curChannel = mChannels[0];
         parseMessage(message);
         
-       // pie('b');
+        // pie('b');
         //apple("df");
         //note('a', 2);
         
@@ -98,7 +98,7 @@ public class MidiTest{
         curChannel.noteOn(currentNote, 100);//On channel 0, play note number 60 with velocity 100 
         try { Thread.sleep((int)length); // wait time in milliseconds to control duration
         } catch( InterruptedException e ) { }
-        curChannel.noteOff(currentNote);//turn of the note
+        curChannel.noteOff(currentNote);//turn off the note
         //System.out.println("note is ending on length:"  + length);
 //        try {
 //			Thread.sleep(1);
